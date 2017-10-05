@@ -1,0 +1,19 @@
+package inc.itnity.elbilad.data.repositories;
+
+import inc.itnity.elbilad.domain.models.article.Article;
+import inc.itnity.elbilad.domain.models.categorie.Category;
+import java.util.List;
+import rx.Observable;
+
+/**
+ * Created by MichaelCloud on 15.01.17.
+ */
+
+public interface ElbiladRepository {
+
+  Observable<Boolean> loadCategoriesAndArticles(boolean refresh);
+
+  Observable<List<Category>> getCategories(boolean refresh);
+
+  Observable<List<Article>> getArticles(boolean refresh);
+}

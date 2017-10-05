@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:adjustViewBounds="true"
+    >
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/menu_bg"
+      android:orientation="vertical"
+      >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/space_32dp"
+        android:background="@color/action_bar_color"
+        >
+
+      <ImageView
+          android:id="@+id/iv_menu_arrow"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="@dimen/space_32dp"
+          android:src="@drawable/ic_arrow_left"
+          />
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="@dimen/space_16dp"
+          android:src="@drawable/ic_logo_mini"
+          />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_menu_home"
+        android:text="@string/home"
+        style="@style/MenuItemTextView"
+        />
+    <View
+        style="@style/ListSeparator"/>
+
+    <TextView
+        android:id="@+id/tv_menu_last_news"
+        android:text="@string/last_news"
+        style="@style/MenuItemTextView"
+        />
+    <View
+        style="@style/ListSeparator"/>
+
+    <TextView
+        android:id="@+id/tv_menu_hz"
+        android:text="الأكثر قراءة"
+        style="@style/MenuItemTextView"
+        />
+    <View
+        style="@style/ListSeparator"/>
+
+    <TextView
+        android:id="@+id/tv_menu_bookmarks"
+        android:text="@string/bookmarks"
+        style="@style/MenuItemTextView"
+        />
+    <View
+        style="@style/ListSeparator"/>
+
+    <TextView
+        android:id="@+id/tv_menu_videos"
+        android:text="@string/videos"
+        style="@style/MenuItemTextView"
+        />
+    <View
+        style="@style/ListSeparator"/>
+
+    <TextView
+        android:id="@+id/tv_menu_photos"
+        android:text="@string/photos"
+        style="@style/MenuItemTextView"
+        />
+
+    <TextView
+        style="@style/MenuCategoryTextView"
+        android:drawableRight="@drawable/ic_folder"
+        android:text="المواضيع"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_menu_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        />
+
+    <TextView
+        style="@style/MenuCategoryTextView"
+        android:drawableRight="@drawable/ic_gear"
+        android:text="@string/settings"
+        />
+
+    <TextView
+        android:id="@+id/tv_menu_about"
+        android:text="@string/about"
+        style="@style/MenuItemTextView"
+        />
+    <View
+        style="@style/ListSeparator"/>
+
+    <TextView
+        android:id="@+id/tv_menu_preferences"
+        android:text="@string/preferences"
+        style="@style/MenuItemTextView"
+        />
+
+  </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+  <FrameLayout
+      android:layout_width="@dimen/space_16dp"
+      android:layout_height="match_parent"
+      android:background="@drawable/gradient_side_menu"
+      />
+
+</FrameLayout>
